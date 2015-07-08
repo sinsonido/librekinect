@@ -12,7 +12,7 @@ endif
 EXTRA_CFLAGS += $(DEBFLAGS)
 
 
-ifeq ($(UNAME),armv6l)
+ifeq ($(UNAME),armv7l)
 	AMRKDIR	:= /usr/src/linux
 else
 	ARCH	:= arm
