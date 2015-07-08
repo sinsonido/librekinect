@@ -21,7 +21,7 @@ else
 endif
 
 default:
-	$(MAKE) -C $(KERNELDIR) M=$(PWD) modules
+	$(MAKE) -C $(KERNELDIR) M=/home/pi/librekinect modules
 
 arm:
 	$(MAKE) ARCH=$(ARCH) CROSS_COMPILE=$(CROSS) -C $(ARMKDIR) M=$(PWD) modules
