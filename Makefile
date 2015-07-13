@@ -1,6 +1,6 @@
-USER	:= $(shell whoami)
+USER	:= pi
 DEBUG   := y
-UNAME	:= $(shell uname -m)
+UNAME	:= 3.18.11-v7+
 obj-m	:= gspca.o kinect.o  
 KERNELDIR ?= /lib/modules/3.18.11-v7+/build
 
@@ -21,10 +21,10 @@ else
 endif
 
 default:
-	$(MAKE) -C $(KERNELDIR) M=/home/pi/librekinect/librekinect modules
+	$(MAKE) -C $(KERNELDIR) M=/home/pi/librekinect modules
 
 arm:
-	$(MAKE) ARCH=$(ARCH) CROSS_COMPILE=$(CROSS) -C $(ARMKDIR) M=/home/pi/librekinect/librekinect modules
+	$(MAKE) ARCH=$(ARCH) CROSS_COMPILE=$(CROSS) -C $(ARMKDIR) M=/home/pi/librekinect modules
 
 unload_drivers:
 	sudo sh unload_drivers.sh
