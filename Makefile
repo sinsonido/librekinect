@@ -24,7 +24,7 @@ default:
 	$(MAKE) -C $(KERNELDIR) M=/home/pi/librekinect/librekinect modules
 
 arm:
-	$(MAKE) ARCH=$(ARCH) CROSS_COMPILE=$(CROSS) -C $(ARMKDIR) M=/home/pi/librekinect/librekinect modules
+	$(MAKE) ARCH=$(ARCH) CROSS_COMPILE=$(CROSS) -C $(ARMKDIR) M=/home/pi/librekinect modules
 
 unload_drivers:
 	sudo sh unload_drivers.sh
