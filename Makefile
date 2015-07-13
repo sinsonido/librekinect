@@ -2,7 +2,7 @@ USER	:= $(shell whoami)
 DEBUG   := y
 UNAME	:= $(shell uname -m)
 obj-m	:= gspca.o kinect.o  
-KERNELDIR ?= /lib/modules/$(uname -r)/build
+KERNELDIR ?= /lib/modules/3.18.11-v7+/build
 
 ifeq ($(DEBUG),y)
   DEBFLAGS = -O -g
